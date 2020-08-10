@@ -1,0 +1,11 @@
+{
+  "name": "assignment1",
+  "version": "1.0.0",
+  "description": "Introduction to fs module and http module",
+  "main": "index.js",
+  "author": "Rahul Sharma <rahul.fabled@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
