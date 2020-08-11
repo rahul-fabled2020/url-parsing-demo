@@ -1,5 +1,4 @@
 const fs = require("fs");
-const { resolve } = require("path");
 
 function readFromFile(filename, path = "files") {
   const filePath = `${path}/${filename}`;
