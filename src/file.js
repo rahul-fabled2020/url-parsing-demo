@@ -1,5 +1,5 @@
 const fs = require("fs");
-const defaultPath = "../files";
+const defaultPath = "files";
 
 function readFromFile(filename, path = defaultPath) {
   const filePath = `${path}/${filename}`;
