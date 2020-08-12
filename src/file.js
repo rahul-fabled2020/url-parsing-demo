@@ -1,6 +1,7 @@
 const fs = require("fs");
+const defaultPath = "../files";
 
-function readFromFile(filename, path = "files") {
+function readFromFile(filename, path = defaultPath) {
   const filePath = `${path}/${filename}`;
 
   return new Promise((resolve, reject) => {
@@ -14,7 +15,7 @@ function readFromFile(filename, path = "files") {
   });
 }
 
-function writeToFile(filename, content, path = "files") {
+function writeToFile(filename, content, path = defaultPath) {
   const filePath = `${path}/${filename}`;
 
   return new Promise((resolve, reject) => {
@@ -28,7 +29,7 @@ function writeToFile(filename, content, path = "files") {
   });
 }
 
-function appendToFile(filename, content, path = "files") {
+function appendToFile(filename, content, path = defaultPath) {
   const filePath = `${path}/${filename}`;
 
   return new Promise((resolve, reject) => {
@@ -42,7 +43,7 @@ function appendToFile(filename, content, path = "files") {
   });
 }
 
-function rename(oldName, newName, path = "files", newPath = "files") {
+function rename(oldName, newName, path = defaultPath, newPath = defaultPath) {
   const oldFilePath = `${path}/${oldName}`;
   const newFilePath = `${newPath}/${newName}`;
 
@@ -59,7 +60,7 @@ function rename(oldName, newName, path = "files", newPath = "files") {
   });
 }
 
-function deleteFile(filename, path='files') {
+function deleteFile(filename, path = defaultPath) {
   const filePath = `${path}/${filename}`;
 
   return new Promise((resolve, reject) => {
@@ -78,5 +79,5 @@ module.exports = {
   writeToFile,
   rename,
   deleteFile,
-  appendToFile
+  appendToFile,
 };
