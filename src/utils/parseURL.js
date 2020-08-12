@@ -6,7 +6,7 @@ function parseURL(url) {
 
   return {
     paths,
-    params
+    query: params
   };
 }
 
